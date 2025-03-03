@@ -1,0 +1,11 @@
+# Thư mục hệ thống
+.DS_Store
+Thumbs.db
+
+# File môi trường
+.env
+
+# Log & Cache
+*.log
+cache/
+dist/
