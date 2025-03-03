@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Nhập</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Đăng Nhập</title>
+        <script>
+            function checkLogin(event) {
+                event.preventDefault(); // Ngăn chặn form submit mặc định
+                
+                var username = document.getElementById("textboxusername").value;
+                var password = document.getElementById("textboxmatkhau").value;
+
+                if (username === "admin" && password === "admin") {
+                    alert("Đăng nhập thành công!");
+                    window.location.href = "welcome.html"; // Chuyển hướng sang trang thành công
+                } else {
+                    alert("Sai tên đăng nhập hoặc mật khẩu!");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <form onsubmit="checkLogin(event)">
+            <label for="">Tên Đăng Nhập</label>
+            <input type="text" placeholder="Username" id="textboxusername2"/>
+            <label for="txtpassword">MẬT KHẨU</label>
+            <input
+                type="password"
+                id="textboxmatkhau"
+                name="password"
+                placeholder="Password"
+            />
+            <button type="submit">Đăng Nhập</button>
+        </form>
+    </body>
 </html>
